@@ -1,0 +1,34 @@
+<odoo>
+    <record id="equipment_details_form_view" model="ir.ui.view">
+        <field name="name">Equipment Detail Form view</field>
+        <field name="model">equipment.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="price"/>
+                        <field name="quantity"/>
+		    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="equipment_details_tree_view" model="ir.ui.view">
+        <field name="name">Equipment Detail Tree view</field>
+        <field name="model">equipment.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="price"/>
+                <field name="quantity"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="equipment_details_hosiptal_action_view" model="ir.actions.act_window">
+        <field name="name">equipment details</field>
+         <field name="res_model">equipment.details</field>
+        <field name="view_mode">tree,form</field>
+   </record>
+</odoo>
